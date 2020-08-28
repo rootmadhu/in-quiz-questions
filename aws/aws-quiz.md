@@ -16,7 +16,7 @@ AWS Assessment
 
 #### Q3. Your database is an RDS instance running SQL Server with Multi-AZ replication and you have several older .NET console utilities that perform database operations every 15 seconds. When the cluster has to switch the primary database server to the secondary AZ, the .NET utilities start to report connection failures to the database although other applications are able to access the database. How do you correct this problem?
 - [ ] Use the RDS console to force a reboot of the database instance so that the primary server becomes the master server again.
-- [ ] The server running the .NET utilities is caching the DNS lookup on the database cluster address. Flush the DNS cache of the server and force the C# utilities to open new connections to the database.
+- [ ] The server running the .NET utilities is caching the DNS lookup on the database cluster address. Flush the DNS cache of the server and force the C# utilities to open new connections to the database.<<< Correct
 - [ ] A.NET application will retain the IP address of a connection string until the host machine is rebooted.
 - [ ] The NET utilities need to change the SQL Server endpoint in the connection strings to read from the secondary database server using a try/catch.
 
@@ -59,7 +59,7 @@ AWS Assessment
 #### Q9. How do you architect a solution for an SQL Server database to be replicated across AWS regions in an active-active architecture?
 - [ ] Use RDS for SQL Server and create the same instance in two different regions. Use Database Migration Service to keep each database in sync.
 - [ ] Use a VPN or VPC peering to establish a connection between the VPCs in each region. Install SOL Server Enterprise Edition on EC2 instances in each region and configure an Always On availability group.
-- [ ] Use RDS for SQL Server 2016 or 2017 Enterprise Edition. Enable Multi-AZ support and select the Mirroring/Always On option. Select another region for the mirroring option
+- [ ] Use RDS for SQL Server 2016 or 2017 Enterprise Edition. Enable Multi-AZ support and select the Mirroring/Always On option. Select another region for the mirroring option<<< Correct
 - [ ] You can not set up an active-active architecture for SQL Server that spans geographic regions.
 
 
@@ -74,7 +74,7 @@ AWS Assessment
 - [ ] The instances created by ECS do not have patches that need to be applied; however you should make sure your containers contain any important security updates,
 - [ ] Refresh the cluster with instances built from the latest ECS AML
 - [ ] ECS clusters do not use EC2 instances.
-- [ ] You should not directly manipulate the EC2 instances created by ECS. AWS will automatically update these instances.
+- [ ] You should not directly manipulate the EC2 instances created by ECS. AWS will automatically update these instances.<<< Correct
 
 
 #### Q12. What in-memory caching server is not supported by ElastiCache?
@@ -118,13 +118,13 @@ AWS Assessment
 - [ ] Redshift
 - [ ] Neptune
 - [ ] DynamoDB
-
+Amazon SimpleDB gives users the option to store tens of attributes for a million customers, but not thousands of attributes for a single customer. So the SimpleDB can be added as response.
 
 #### Q17. You need a schemaless database. Which Amazon database service provides that solution?
 - [ ] ORDS
 - [ ] Aurora
 - [ ] Redshift
-- [ ] DynamoDB
+- [ ] DynamoDB <<< Correct
 
 
 #### Q18. Which communication channel does SNS not support natively?
@@ -156,7 +156,7 @@ AWS Assessment
 
 
 #### Q22. You are hosting an application configured to stream media to its clients on TCP ports 3380-3384, 3386-3388, and 3390. The Inbound tab below shows three incoming security group policies attached to this instance. Which policy should you use?
-- [ ] The rule that exposes TCP ports 3380-3390 would also publicly expose port 3389 (RDP) to the entire internet. Write separate rules to only expose the needed ports.
+- [ ] The rule that exposes TCP ports 3380-3390 would also publicly expose port 3389 (RDP) to the entire internet. Write separate rules to only expose the needed ports.<<< Correct
 - [ ] The first security group rule allows all traffic into this instance. Exposing your entire instance to the whole internet leaves the server open to various attacks of the other services running on different port numbers.
 - [ ] Verify that the AWS account owners actually control the entire CIDR C block for 12.228.11.0-255 and these are secured IPs for RDP access into this instance.
 - [ ] There are no recommendations to make.
